@@ -1,6 +1,6 @@
 Package.describe({
   name: 'immojun:rest-accounts-password',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Get a login token to use with simple:rest',
   // URL to the Git repository containing the source code for this package.
