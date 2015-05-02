@@ -2,11 +2,6 @@
 
 Rap = {};
 
-Rap.addLogin = function(path) {
-    Router.route(path, {where: 'server'})
-    .post(loginHandler);
-};
-
 var loginHandler = function() {
 
     var options = this.request.body;
@@ -73,12 +68,12 @@ var loginHandler = function() {
     }
 };
 
-Rap.addRegister = function(path) {
+Rap.addLogin = function(path) {
     Router.route(path, {where: 'server'})
-    .post(registerHandler);
+    .post(loginHandler);
 };
 
-var registerHanlder = function(){
+var registerHandler = function(){
     var options = this.request.body;
 
     try {
@@ -122,6 +117,11 @@ var registerHanlder = function(){
         result.data = errJson;
         this.response.end(EJSON.stringify(result));
     }
+};
+
+Rap.addRegister = function(path) {
+    Router.route(path, {where: 'server'})
+    .post(registerHandler);
 };
 
 // Just like in DDP, send a sanitized error over HTTP
