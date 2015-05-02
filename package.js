@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.addFiles('rest-accounts-password.js','server');
   api.use('accounts-password');
-  api.use('iron:router');
+  api.use('iron:router@1.0.7');
   if(api.export){
     api.export('Rap');
   }
